@@ -1,0 +1,3 @@
+C:/Users/Андрей и Витя/CLionProjects/Pr14/cmake-build-debug/CMakeFiles/Pr14.dir
+C:/Users/Андрей и Витя/CLionProjects/Pr14/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Андрей и Витя/CLionProjects/Pr14/cmake-build-debug/CMakeFiles/rebuild_cache.dir

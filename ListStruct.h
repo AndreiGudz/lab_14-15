@@ -10,9 +10,14 @@
 #define list(var) listInit(var)
 
 typedef struct Node{
-    struct Student student;
+    struct Student* _student;
     struct Node* next;
 } Node;
+
+typedef struct Args{
+    struct List* list;
+    int count;
+} Args;
 
 typedef struct List{
     Node* head;
@@ -23,8 +28,10 @@ typedef struct List{
     void* (*append)(void* );
 //    bool (*swap)(struct List*, int first_index, int second_index);
     void* (*print)(void*);
+    void* (*printAll)(void*);
 } List;
 
 void* (listInit)(void*);
+void* (topTenInMath)(void*);
 
 #endif //PR14_LISTSTRUCT_H

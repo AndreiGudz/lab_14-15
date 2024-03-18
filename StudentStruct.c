@@ -36,7 +36,7 @@ const char last_names[10][20] = {
 void* studentPrint(void*);
 void* studentPrintInList(void*);
 
-void* studentInit(void* _student){
+void* studentFill(void* _student){
     Student* student = _student;
     strcpy(student->name,names[rand()%10]);
     strcpy(student->last_name, last_names[rand() % 10]);
@@ -57,31 +57,4 @@ void* studentPrint(void* _student){
     return NULL;
 }
 
-void* topTenInMath(void* _list){
-    List* list = _list;
-    int top_in_math;
-    if (list->size > 10)
-        top_in_math = 10;
-    else
-        top_in_math = list->size;
-
-    int position_in_top = 1;
-    for (
-            int max_grade = 5;
-            (position_in_top <= top_in_math) && (max_grade > 1);
-            max_grade--)
-        for (Node* cur_elem = list->head;
-             cur_elem != NULL;
-             cur_elem = cur_elem->next){
-            if (
-                    (cur_elem->student.mathematics_grade == max_grade)
-                    && (position_in_top <= top_in_math)
-                    ){
-                printf("Top position %d\n", position_in_top);
-                cur_elem->student.print(&(cur_elem->student));
-                position_in_top += 1;
-            }
-        }
-    return NULL;
-}
 

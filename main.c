@@ -1,26 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "StudentStruct.h"
 #include "CreateLoadStudents.h"
 
 int main()
 {
+//    system("chcp 65001");
     printf("Загрузить существующих студентов или создать новых?(y/N): ");
     char create_file = 'n';
-    scanf(&create_file);
-    printf("\n");
+    scanf("%c", &create_file);
+    fflush(stdin);
+//    printf("\n");
 
-    TopArgs* args;
+    List* list = list(NULL);
 
     if (create_file == 'y')
-        args = CreateStudents(NULL);
+        list = LoadStudents(NULL);
     else
-        args = LoadStudents(NULL);
+        list = CreateStudents(NULL);
 
-    for (args->count = 0 ; args->count < args->list->size; args->count++) {
-        args->list->print(args);
-    }
-
-    MathTop(args);
+    MathTop(list);
     return 0;
 }
 

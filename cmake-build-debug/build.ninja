@@ -61,6 +61,18 @@ build CMakeFiles/Pr14.dir/StudentStruct.c.obj: C_COMPILER__Pr14_Debug C$:/Users/
   OBJECT_DIR = CMakeFiles\Pr14.dir
   OBJECT_FILE_DIR = CMakeFiles\Pr14.dir
 
+build CMakeFiles/Pr14.dir/CreateLoadStudents.c.obj: C_COMPILER__Pr14_Debug C$:/Users/Андрей$ и$ Витя/CLionProjects/Pr14/CreateLoadStudents.c || cmake_object_order_depends_target_Pr14
+  DEP_FILE = CMakeFiles\Pr14.dir\CreateLoadStudents.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles\Pr14.dir
+  OBJECT_FILE_DIR = CMakeFiles\Pr14.dir
+
+build CMakeFiles/Pr14.dir/ListStruct.c.obj: C_COMPILER__Pr14_Debug C$:/Users/Андрей$ и$ Витя/CLionProjects/Pr14/ListStruct.c || cmake_object_order_depends_target_Pr14
+  DEP_FILE = CMakeFiles\Pr14.dir\ListStruct.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles\Pr14.dir
+  OBJECT_FILE_DIR = CMakeFiles\Pr14.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Pr14
@@ -69,7 +81,7 @@ build CMakeFiles/Pr14.dir/StudentStruct.c.obj: C_COMPILER__Pr14_Debug C$:/Users/
 #############################################
 # Link the executable Pr14.exe
 
-build Pr14.exe: C_EXECUTABLE_LINKER__Pr14_Debug CMakeFiles/Pr14.dir/main.c.obj CMakeFiles/Pr14.dir/StudentStruct.c.obj
+build Pr14.exe: C_EXECUTABLE_LINKER__Pr14_Debug CMakeFiles/Pr14.dir/main.c.obj CMakeFiles/Pr14.dir/StudentStruct.c.obj CMakeFiles/Pr14.dir/CreateLoadStudents.c.obj CMakeFiles/Pr14.dir/ListStruct.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Pr14.dir

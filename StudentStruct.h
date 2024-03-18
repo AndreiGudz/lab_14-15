@@ -5,7 +5,12 @@
 #ifndef PR13_STUDENTSTRUCT_H
 #define PR13_STUDENTSTRUCT_H
 
-struct Student{
+#include "ListStruct.h"
+
+#define MathTop(value) topTenInMath(value)
+#define student(var) studentInit(var)
+
+typedef struct Student{
     char name[20];
     char last_name[20];
     char gender;
@@ -15,30 +20,13 @@ struct Student{
     int physics_grade;
     int chemistry_grade;
     void* (*print)(void* );
-};
+} Student;
 
-struct Node{
-    struct Student student;
-    struct Node* next;
-};
-
-struct TopArgs{
-    struct List* list;
+typedef struct TopArgs{
+    List* list;
     int count;
-};
+} TopArgs;
 
-struct List{
-    struct Node* head;
-    struct Node* tail;
-    unsigned int size;
-//    void (*insert)(struct List*, int index);
-//    void (*erase)(struct List*, int index);
-    void* (*append)(void* );
-//    bool (*swap)(struct List*, int first_index, int second_index);
-    void* (*print)(void*);
-};
-
-void* (listInit)();
 void* studentInit(void*);
 void* topTenInMath(void*);
 

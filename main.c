@@ -1,32 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include "StudentStruct.h"
-
-#define SRandom srand(time(NULL))
-#define MathTop(value) topTenInMath(value)
-#define ListFilling(count, list)        \
-for (int i = 0; i < count; i++)         \
-    list_of_student->append(list);
+#include "CreateLoadStudents.h"
 
 int main()
 {
-    SRandom;
-    printf("How many students create (max 20): ");
-    int count_student;
-    scanf("%d",&count_student);
-    if (count_student > 20)
-        count_student = 20;
-
-    struct List* list_of_student = listInit();
-    ListFilling(count_student, list_of_student)
-
-    struct TopArgs* args = malloc(sizeof(struct TopArgs) );
-    args->list = list_of_student;
-    for (args->count = 0; args->count < count_student; args->count++){
-        list_of_student->print(args);
-    }
+    printf("Загрузить существующих студентов или создать новых?(y/N): ");
+    char create_file = 'n';
+    scanf(&create_file);
     printf("\n");
+
+    TopArgs* args;
+
+    if (create_file == 'y')
+        args = CreateStudents(NULL);
+    else
+        args = LoadStudents(NULL);
+
+    for (args->count = 0 ; args->count < args->list->size; args->count++) {
+        args->list->print(args);
+    }
+
     MathTop(args);
     return 0;
 }

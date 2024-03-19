@@ -24,8 +24,8 @@ void* (listInit)(void*){
 void* appendStudent(void* _list){
     List* list = _list;
     Node* student = malloc(sizeof(Node));
-    student->_student = malloc(sizeof(Student));
-    student((student->_student));
+    student->node_student = malloc(sizeof(Student));
+    student((student->node_student));
     student->next = NULL;
 
     if(list->size == 0){
@@ -44,6 +44,7 @@ void* (printAllList)(void* _list){
     Args* args = malloc(sizeof(Args) );
     args->list = list;
     for (args->count = 0 ; args->count < args->list->size; args->count++) {
+        printf("%d ", args->count);
         args->list->print(args);
     }
     return NULL;
@@ -61,7 +62,7 @@ void* studentPrintInList(void* _args){
             cur_elem = cur_elem->next
             ){
         if(i == args->count){
-            cur_elem->_student->print(cur_elem->_student);
+            cur_elem->node_student->print(cur_elem->node_student);
         }
         i++;
     }
@@ -86,11 +87,11 @@ void* topTenInMath(void* _list){
              cur_elem != NULL;
              cur_elem = cur_elem->next){
             if (
-                    (cur_elem->_student->mathematics_grade == max_grade)
+                    (cur_elem->node_student->mathematics_grade == max_grade)
                     && (position_in_top <= top_in_math)
                     ){
                 printf("Top position %d\n", position_in_top);
-                cur_elem->_student->print(cur_elem->_student);
+                cur_elem->node_student->print(cur_elem->node_student);
                 position_in_top += 1;
             }
         }

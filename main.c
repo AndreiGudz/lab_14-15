@@ -5,7 +5,7 @@
 
 int main()
 {
-//    system("chcp 65001");
+    system("chcp 65001");
     printf("Загрузить существующих студентов или создать новых?(y/N): ");
     char create_file = 'n';
     scanf("%c", &create_file);

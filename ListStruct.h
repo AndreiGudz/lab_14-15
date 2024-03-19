@@ -10,7 +10,7 @@
 #define list(var) listInit(var)
 
 typedef struct Node{
-    struct Student* _student;
+    struct Student* node_student;
     struct Node* next;
 } Node;
 
